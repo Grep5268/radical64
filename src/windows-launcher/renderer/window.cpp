@@ -30,8 +30,16 @@ int initWindow()
 
     currentWindow = window;
 
+
     while (!glfwWindowShouldClose(window))
     {
+        processWindowInput(window);
+        
+        // render section
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        // render section end
+
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
@@ -48,4 +56,10 @@ void framebufferSizeCallback(GLFWwindow* window, int width, int height)
 
 GLFWwindow* getCurrentWindow() {
     return currentWindow;
+}
+
+void processWindowInput(GLFWwindow* window)
+{
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
 }

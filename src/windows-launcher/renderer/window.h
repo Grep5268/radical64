@@ -11,3 +11,4 @@ int initWindow();
 void framebufferSizeCallback(GLFWwindow* window, int width, int height);
 
 GLFWwindow* getCurrentWindow();
+void processWindowInput(GLFWwindow* window);
