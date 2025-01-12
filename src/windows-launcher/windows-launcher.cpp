@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "windows-launcher.h"
+#include "renderer/window.h"
 
 #define MAX_LOADSTRING 100
 
@@ -138,7 +139,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 DestroyWindow(hWnd);
                 break;
             case ID_FILE_LAUNCHGAME:
-                MessageBox(hWnd, L"You selected 'New Item'!", L"Event Handler", MB_OK);
+                if (getCurrentWindow() == nullptr) {
+                    initWindow();
+                }
                 break;
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);

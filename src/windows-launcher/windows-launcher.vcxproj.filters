@@ -27,9 +27,21 @@
     <ClInclude Include="windows-launcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="renderer\window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="windows-launcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer\window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
