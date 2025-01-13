@@ -143,6 +143,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="renderer\window.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="shaders\tempShaders.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="windows-launcher.h" />
   </ItemGroup>
